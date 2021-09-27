@@ -17,15 +17,15 @@ class CreateUsuarioTable extends Migration
             $table->id();
             $table->string('nombre');
             $table->string('ap_paterno');
-            $table->string('ap_materno')
-            $table->string('domicilio');
+            $table->string('ap_materno');
+            $table->string('domicilio');                    
             $table->string('colonia');
             $table->string('ciudad');
             $table->string('codigo_postal');
             $table->string('telefono');
             $table->string('correo')->unique();
             $table->timestamp('correo_verificado')->nullable();
-            $table->string('contrasena');
+            $table->string('contrasena')->nullable();
             $table->string('tipo_usuario')->nullable();
             $table->timestamps();
         });

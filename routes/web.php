@@ -29,6 +29,11 @@ Route::get('/usuarios/{user}', 'UserController@show')
 -> name('users.show');
 
 
+
+Route::get('/computadora/nuevo', 'ComputerController@create')->name('computer.create');
+
+//-------------------------------------//
+
 Route::get('/usuarios/nuevo', 'UserController@create')->name('users.create');
 
 Route::post('/usuarios/crear', 'UserController@store');
