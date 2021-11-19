@@ -79,7 +79,19 @@ public function microfix(){
 
     public function edit(Usuario $user){
 
-        return view('users.edit', ['user' => $user]);
+            $ciudades =
+            [
+                'Irapuato', 'Celaya'. 'Juventino Rosas'
+            ];
+
+
+
+        return view('users.edit', [
+            'user' => $user,
+             $ciudades
+
+
+        ]);
 
     }
 
@@ -88,6 +100,13 @@ public function microfix(){
     public function update(Usuario $user){
         $data = request()->validate([
                     'nombre' => 'required',
+                    'ap_paterno' => 'required',
+                    'ap_materno' => 'required',
+                    'domicilio' => 'required',
+                    'colonia' => 'required',
+                    'ciudad' => 'required',
+                    'codigo_postal' => 'required',
+                    'telefono' => 'required',
                     'correo' => [
                         'required',
                          'email',

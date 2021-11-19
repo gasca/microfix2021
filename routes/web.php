@@ -44,6 +44,9 @@ Route::put('/usuarios/{user}', 'UserController@update')->name('users.update');
 
 Route::delete('usuarios/{user}','UserController@destroy' )->name('users.destroy');
 
+
+//----------------------------------//
+
 Route::get('/registro/nuevo', 'ComputerController@create')->name('computer.create');
 
 Route::post('/registro/crear', 'ComputerController@store');

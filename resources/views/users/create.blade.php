@@ -82,7 +82,7 @@
 		<div class="form-group">
 	
 		<label for="CP">Codigo Postal</label>	
-		<input type="text" name="codigo_postal" class="form-control" placeholder=""   value= "{{ old('domicilio')  }}">
+		<input type="text" name="codigo_postal" class="form-control" placeholder=""   value= "{{ old('codigo_postal')  }}">
 		@if($errors->has('codigo_postal'))
 			<p>{{ $errors->first('codigo_postal') }}</p>
 		@endif

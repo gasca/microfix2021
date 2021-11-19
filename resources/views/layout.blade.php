@@ -100,10 +100,22 @@
             <li><a class="dropdown-item" href="#">Tablets</a></li>
           </ul>
         </li>
-    
-        <li class="nav-item">
-          <a class="nav-link" href="#">Ubicanos</a>
+           <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+            <li><a class="dropdown-item" href="#">Computadoras</a></li>
+            <li><a class="dropdown-item" href="#">Laptop</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Smartphone(Celulares)</a></li>
+            <li><a class="dropdown-item" href="#">Tablets</a></li>
+          </ul>
         </li>
+
+    
+    
+            <li class="nav-item">
+              <a class="nav-link" href="#">Ubicanos</a>
+            </li>
+                 
+               
 
         
       </ul>

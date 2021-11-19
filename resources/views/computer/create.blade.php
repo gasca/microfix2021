@@ -32,7 +32,7 @@
   <div class="form-group">
 
 		<label for="name">Marca</label>
-		<input type="text" name="marca" class="form-control"  placeholder="" value= "{{ old('marca')  }}">
+		<input type="text" name="marca" class="form-control"  placeholder="" value= "{{ old('marca', 'lenovo')}}">
 		@if($errors->has('marca'))
 			<p>{{ $errors->first('marca') }}</p>
 		@endif
@@ -40,7 +40,7 @@
     <div class="form-group">
 
 		<label for="name">Modelo</label>
-		<input type="text" name="modelo" class="form-control"  placeholder="" value= "{{ old('modelo')  }}">
+		<input type="text" name="modelo" class="form-control"  placeholder="" value= "{{ old('modelo', 'v310')  }}">
 		@if($errors->has('modelo'))
 			<p>{{ $errors->first('modelo') }}</p>
 		@endif
@@ -49,7 +49,7 @@
    <div class="form-group">
 
 		<label for="name">SN</label>
-		<input type="text" name="SN" class="form-control"  placeholder="" value= "{{ old('SN')  }}">
+		<input type="text" name="SN" class="form-control"  placeholder="" value= "{{ old('SN','12345')  }}">
 		@if($errors->has('SN'))
 			<p>{{ $errors->first('SN') }}</p>
 		@endif
@@ -60,7 +60,7 @@
 <div class="form-group">
 	
 		<label for="Direccion">Memoria Ram</label>	
-		<input type="text" name="Memoria_Ram" class="form-control" placeholder=""   value= "{{ old('Memoria_Ram')  }}">
+		<input type="text" name="Memoria_Ram" class="form-control" placeholder=""   value= "{{ old('Memoria_Ram', '500')  }}">
 		@if($errors->has('Memoria_Ram'))
 			<p>{{ $errors->first('Memoria_Ram') }}</p>
 		@endif
@@ -100,43 +100,39 @@
 
 		
   	</div>
-   <div class="form-group">
+	  <div class="form-group">
 	
-		<label for="phone">Telefono para llamarle</label>	
-		<input type="input" name="telefono" class="form-control"  placeholder="" value= "{{ old('telefono')  }}" >
-		@if($errors->has('telefono'))
-			<p>{{ $errors->first('telefono') }}</p>
-		@endif
+		<label for="Tipo de Equipo">Tipo de Equipo</label>	
 		
-  	</div>
-  	 
+		<select class="form-control" name="Tipo_Equipo">
+			<option value="Laptop">Laptop</option>
+			<option value="Computadora Ensamblada">Computadora Ensamblada</option>
+			<option value="All in One">All in One</option>
 
+		</select>
 
-
-  	<div class="form-group">
 	
-		<label for="correo">Correo</label>	
-		<input type="text" name="correo" class="form-control" placeholder="" value= "{{ old('correo')  }}">
-		@if($errors->has('correo'))
-			<p>{{ $errors->first('correo') }}</p>
-		@endif
+  		 </div>
+
+
+
+	<div class="form-group">
 	
-  	</div>
+			<label for="Manipunipulacion">¿Algun tecnico ya la reviso?</label>	
+			
+			<select class="form-control" name="Manipulacion">
+				<option value="Si">Si</option>
+				<option value="No">No</option>
+				<option value="No lo se">No lo se</option>
+
+			</select>
 
 
+	 </div>
 
-  <div class="form-group">
-	
-		<label for="password">Contraseña</label>	
-		<input type="password" name="contrasena" class="form-control" placeholder="Mayor a 6 Caracteres">
-		@if($errors->has('contrasena'))
-			<p>{{ $errors->first('contrasena') }}</p>
-		@endif
-	   
-  </div>
 
   	
-	<button type="submit" class="btn btn-primary">Crear Usuario</button>	
+	<button type="submit" class="btn btn-primary">Registrar Equipo</button>	
 	 {{-- <a href="{{ url('/usuarios') }}"> Regresar a Lista </a> --}}
     <a href="{{ action('UserController@index') }}" class="btn btn-link"> Regresar a Lista </a>
 

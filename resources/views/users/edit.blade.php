@@ -1,11 +1,11 @@
 @extends('layout')
 
-@section('title', "Crear Usuario")
+@section('title', "Modificar Usuario")
 
 @section('content')
 
 	<div class="card">
-		<h4 class="card-header">Datos del Solicitante</h4>
+		<h4 class="card-header">Datos del Usuario</h4>
 		<div class="card-body">
 			
 
@@ -68,12 +68,20 @@
 
   <div class="form-group">
 	
+		<?php	 $colonias = ['Encanto', 'Villa San Angel']; ?>
 		<label for="Colonia">Colonia</label>	
 		
 		  <select class="form-control" name="colonia">
-	 	  <option value="Encanto" {{ old( $user->domicilio) == 'Encanto' ? 'selected' : '' }}>Encanto</option>
-	 	  <option value="Villa San Angel" {{ old( $user->domicilio) == 'Villa San Angel' ? 'selected' : '' }}>Villa San Angel</option>
-	      
+
+	 					@foreach($colonias as $colonia)
+
+					@if ($user->colonia == $colonia)
+
+				  		<option value="{{ $user->colonia }}" selected>{{$user->colonia}}</option>
+				  	@else
+						<option value={{$colonia}}>{{$colonia}}</option>
+					@endif
+			@endforeach
 	    
 	    </select>
 
@@ -82,8 +90,10 @@
 
     <div class="form-group">
 
-	<?php $ciudades = ['Celaya', 'Irapuato']; ?>
-
+	
+<?php 
+				$ciudades = ['Celaya', 'Irapuato', 'Juventino Rosas'];
+ ?>
 	    	
 	
 		<label for="Ciudad">Ciudad</label>	
@@ -102,6 +112,17 @@
 
 		
   	</div>
+
+
+  		<div class="form-group">
+	
+		<label for="CP">Codigo Postal</label>	
+		<input type="text" name="codigo_postal" class="form-control" placeholder=""   value= "{{ old('codigo_postal', $user->codigo_postal)  }}">
+		@if($errors->has('codigo_postal'))
+			<p>{{ $errors->first('codigo_postal') }}</p>
+		@endif
+	
+  		</div>
    <div class="form-group">
 	
 		<label for="phone">Telefono para llamarle</label>	

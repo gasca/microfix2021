@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\Rule; 
 use App\Models\Usuario;
-use App\Models\Equipo;
+use App\Models\Computadora;
 use App\Models\Reporte;
 use App\Models\Evidencia;
 use Carbon\Carbon;
@@ -25,35 +25,35 @@ class ComputerController extends Controller
 
             $data = request()->validate(
                 [
-                    'nombre' => 'required',
-                    'ap_paterno' => 'required',
-                    'ap_materno' => 'required',
-                    'domicilio' => 'required',
-                    'colonia' => 'required',
-                    'ciudad' => 'required',
-                    'codigo_postal' => 'required',
-                    'telefono' => 'required',
-                    'correo' => ['required','email','unique:usuario,correo'],
+                    'Marca' => 'required',
+                    'Modelo' => 'required',
+                    'SN' => 'required',
+                    'Memoria_Ram' => 'required',
+                    'Disco_Duro_SSD' => 'required',
+                    'Disco_Duro_HDD' => 'required',
+                    'Sistema_Operativo' => 'required',
+                    'Tipo_Equipo' => 'required',
+                    'Manipulacion' => 'required',
                    // 'contrasena' => 'required',
-                     'radiosd' =>'',
-                     'radiosdiag' =>'',
-                     'radioservicio' =>'',
+                   //  'radiosd' =>'',
+                   //  'radiosdiag' =>'',
+                   //  'radioservicio' =>'',
                      
                     
             
 
                 ]);
 
-           $user = Usuario::create([
-                'nombre' => $data['nombre'],
-                'ap_paterno' => $data['ap_paterno'],
-                'ap_materno' => $data['ap_materno'],
-                'domicilio' => $data['domicilio'],
-                'colonia' => $data['colonia'],
-                'ciudad' => $data['ciudad'],
-                'codigo_postal' => $data['codigo_postal'],
-                'telefono' => $data['telefono'],
-                'correo' => $data['correo'],
+           $computer = Computadora::create([
+                'Marca' => $data['Marca'],
+                'Modelo' => $data['Modelo'],
+                'SN' => $data['SN'],
+                'Memoria_Ram' => $data['Memoria_Ram'],
+                'Disco_Duro_SSD' => $data['Disco_Duro_HDD'],
+                'Sistema_Operativo' => $data['Sistema_Operativo'],
+                'Tipo_Equipo' => $data['Tipo_Equipo'],
+                'Estatus_Equipo' => 'Registro',
+                'Manipulacion' => $data['Manipulacion'],
                 //'contrasena' => $data['contrasena'],
 
 
@@ -61,7 +61,7 @@ class ComputerController extends Controller
 
             ]);
 
-
+/*
            $equipo = Equipo::Create([
 
             	'Descripcion'=>$data['radiosd'],
@@ -75,12 +75,12 @@ class ComputerController extends Controller
             	'Accion' => $data['radiosdiag'],	
             	'status' => 'registro',
             	'Servicio_a_Domicilio' => $data['radioservicio'],
-                 'Fecha_Entrada' => Carbon::now(),
+                /* 'Fecha_Entrada' => Carbon::now(),*/
                 //'Fecha_Entrada' => $now->format('Y-m-d H:i:s'),
            
-            ]);
+        /*    ]);
 
-
+*/
 
 
             return redirect()->route('users.index');
