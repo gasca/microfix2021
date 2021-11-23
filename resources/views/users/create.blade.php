@@ -9,7 +9,7 @@
 		<div class="card-body">
 			
 
-@if($errors->any())
+{{-- @if($errors->any())
 	<div class="alert alert-danger">
 			<h6>Por favor corrige los siguientes errores:</h6>
 
@@ -23,9 +23,9 @@
 
 	</div>
 
-@endif
+@endif --}}
 
-<form method="POST" action="{{url('/usuarios/crear')}}">
+<form method="POST" action="{{route('users.store')}}">
 	
 	{{csrf_field()}}
 
@@ -76,7 +76,6 @@
 	      <option value="Encanto">Encanto</option>
 	    
 	    </select>
-
 		
   	</div>
 		<div class="form-group">

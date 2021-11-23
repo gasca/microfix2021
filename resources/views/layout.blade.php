@@ -65,108 +65,17 @@
 
 <body class="d-flex flex-column h-100">
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-        <!-- <img id="logo" src="img/logohcolor.png" alt="">  -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarScroll">
-      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Productos
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-            <li><a class="dropdown-item" href="#">Computadoras</a></li>
-            <li><a class="dropdown-item" href="#">Accesorios para computadoras</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Camaras</a></li>
-          </ul>
-        </li>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Reparame
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-            <li><a class="dropdown-item" href="#">Computadoras</a></li>
-            <li><a class="dropdown-item" href="#">Laptop</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Smartphone(Celulares)</a></li>
-            <li><a class="dropdown-item" href="#">Tablets</a></li>
-          </ul>
-        </li>
-           <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-            <li><a class="dropdown-item" href="#">Computadoras</a></li>
-            <li><a class="dropdown-item" href="#">Laptop</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Smartphone(Celulares)</a></li>
-            <li><a class="dropdown-item" href="#">Tablets</a></li>
-          </ul>
-        </li>
-
-    
-    
-            <li class="nav-item">
-              <a class="nav-link" href="#">Ubicanos</a>
-            </li>
-                 
-               
-
-        
-      </ul>
-     
-    </div>
-  </div>
-</nav>  
-
-
-
-    <!-- Begin page content -->
-    <main role="main" class="flex-shrink-11">
+            @include('partials.nav')
+            
+      <!-- Begin page content -->
+      <main role="main" class="flex-shrink-11">
         <div class="container">
             <div class="row mt-5">
-        <div class="col-11">
-            @yield('content')
-
-
-
-        </div>
-
-
-</div>
-
-
+               <div class="col-11">
+                    @yield('content')  
+                </div>
+              </div>
         </div>
     </main>
 
-    <footer class="footer mt-auto py-3">
-        <div class="container">
-            
-            <span class="text-muted">
-                <a href="https://facebook.com/MicrofixIrapuato"  target="_blank" >
-                    <img src="img/icon/facebook.png" alt="">
-                    facebook/MicrofixIrapuato                
-                </a></span>
-            <span class="text-muted">
-                <a href="https://api.whatsapp.com/send?phone=524623353961&text=Hola!%20Quiero%20Información!" target="_blank" >
-                    <img src="img/icon/whatsapp.png" alt="">
-                    462-335-39-61
-                </a></span>
-        </div>
-    </footer>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
-    
-    
-
-</body>
-
-</html>
+ @include('partials.footer')

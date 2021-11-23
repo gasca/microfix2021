@@ -8,7 +8,7 @@
 		<h4 class="card-header">Datos del Usuario</h4>
 		<div class="card-body">
 			
-
+{{-- 
 @if($errors->any())
 	<div class="alert alert-danger">
 			<h6>Por favor corrige los siguientes errores:</h6>
@@ -21,10 +21,11 @@
 			</ul> 
 	</div>
 
-@endif
+@endif --}}
 
 
-<form method="POST" action="{{url("/usuarios/{$user->id}")}}">
+<form method="POST" action="{{url("/usuarios/{$user->id}")}}"> 
+	{{-- <form method="POST" action="{{route('users.update', [$user->id]  }")}}"> --}}
 	{{ method_field('PUT') }}
 	{{csrf_field()}}
 	

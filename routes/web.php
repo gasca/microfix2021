@@ -32,11 +32,11 @@ Route::get('/usuarios/{user}', 'UserController@show')
 
 Route::get('/computadora/nuevo', 'ComputerController@create')->name('computer.create');
 
-//-------------------------------------//
+//-----------------es importante el orden de las rutas  /usuarios/crear o user--------------------//
 
 Route::get('/usuarios/nuevo', 'UserController@create')->name('users.create');
 
-Route::post('/usuarios/crear', 'UserController@store');
+Route::post('/usuarios/crear', 'UserController@store')->name('users.store');
 
 Route::get('/usuarios/{user}/editar', 'UserController@edit')->name('users.edit');
 
