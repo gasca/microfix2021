@@ -18,6 +18,7 @@ class CreateUsuarioTable extends Migration
             $table->string('nombre');
             $table->string('ap_paterno');
             $table->string('ap_materno');
+            $table->string('curp')->unique();
             $table->string('domicilio');                    
             $table->string('colonia');
             $table->string('ciudad');

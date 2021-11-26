@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
+use App\Http\Requests\SaveUserRequest;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\Rule; 
 use App\Models\Usuario;
@@ -37,43 +38,12 @@ public function microfix(){
                             } 
 
 
-    public function store(){
+    public function store(SaveUserRequest $request){
 
-            $data = request()->validate(
-                [
-                    'nombre' => 'required',
-                    'ap_paterno' => 'required',
-                    'ap_materno' => 'required',
-                    'domicilio' => 'required',
-                    'colonia' => 'required',
-                    'ciudad' => 'required',
-                    'codigo_postal' => 'required',
-                    'telefono' => 'required',
-                    'correo' => ['required','email','unique:usuario,correo'],
-                    'contrasena' => 'required',
-                    
-            
+               return $request->file('foto')->store('images', 'public');
 
-                ]);
-
-            Usuario::create([
-                'nombre' => $data['nombre'],
-                'ap_paterno' => $data['ap_paterno'],
-                'ap_materno' => $data['ap_materno'],
-                'domicilio' => $data['domicilio'],
-                'colonia' => $data['colonia'],
-                'ciudad' => $data['ciudad'],
-                'codigo_postal' => $data['codigo_postal'],
-                'telefono' => $data['telefono'],
-                'correo' => $data['correo'],
-                'contrasena' => $data['contrasena'],
-
-
-                
-
-            ]);
-
-            return redirect()->route('users.index');
+               Usuario::create($request->validated());
+               return redirect()->route('users.index');
 
     }
 
@@ -97,37 +67,9 @@ public function microfix(){
 
 
 
-    public function update(Usuario $user){
-        $data = request()->validate([
-                    'nombre' => 'required',
-                    'ap_paterno' => 'required',
-                    'ap_materno' => 'required',
-                    'domicilio' => 'required',
-                    'colonia' => 'required',
-                    'ciudad' => 'required',
-                    'codigo_postal' => 'required',
-                    'telefono' => 'required',
-                    'correo' => [
-                        'required',
-                         'email',
-                         Rule::unique('Usuario')->ignore($user->id)],
-                         'contrasena' => '',
-        ]);
-
-        if($data['contrasena'] != null )
-        {
-
-              $data['contrasena'] = bcrypt($data['contrasena']);
-        }
-        else
-        {
-
-            unset($data['contrasena']);
-        }
-
-
-        $user->update($data);
-
+    public function update(Usuario $user, SaveUserRequest $request){
+       
+        $user->update($request->validated());
 
         return redirect()->route('users.show', ['user' => $user]);
 

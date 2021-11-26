@@ -25,7 +25,11 @@
 
 @endif --}}
 
-<form method="POST" action="{{route('users.store')}}">
+<form
+	method="POST" 
+	action="{{route('users.store')}}"
+	enctype="multipart/form-data"
+	>
 	
 	{{csrf_field()}}
 
@@ -54,6 +58,15 @@
 			<p>{{ $errors->first('ap_materno') }}</p>
 		@endif
   </div>
+
+  <div class="form-group">
+
+	<label for="name">Curp</label>
+	<input type="text" name="curp" class="form-control"  placeholder="" value= "{{ old('curp')  }}">
+	@if($errors->has('curp'))
+		<p>{{ $errors->first('curp') }}</p>
+	@endif
+</div>
 
 	
 
@@ -135,8 +148,27 @@
 	   
   </div>
 
-  	
-	<button type="submit" class="btn btn-primary">Crear Usuario</button>	
+
+  <div class="form-group">
+
+	<div class="mb-3">
+		<label for="formFile" class="form-label">Foto del Alumno</label>
+		<input class="form-control" name="foto" type="file" id="formFile">
+	</div>
+	
+</div>
+
+	<div class="form-group">
+
+		<div class="mb-3">
+			<label for="formFile" class="form-label">Curp</label>
+			<input class="form-control" type="file" id="formFile">
+		</div>
+		
+	</div>
+
+
+		<button type="submit" class="btn btn-primary">Crear Usuario</button>	
 	 {{-- <a href="{{ url('/usuarios') }}"> Regresar a Lista </a> --}}
     <a href="{{ action('UserController@index') }}" class="btn btn-link"> Regresar a Lista </a>
 

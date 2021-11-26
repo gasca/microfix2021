@@ -55,6 +55,15 @@
 		@endif
   </div>
 
+  <div class="form-group">
+
+	<label for="name">Curp</label>
+	<input type="text" name="curp" class="form-control"  placeholder="" value= "{{ old('curp', $user->curp)  }}">
+	@if($errors->has('curp'))
+		<p>{{ $errors->first('curp') }}</p>
+	@endif
+</div>
+
 	
 
 <div class="form-group">

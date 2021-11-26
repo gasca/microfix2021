@@ -19,6 +19,7 @@ class Usuario extends Model
         'nombre',
         'ap_paterno',
         'ap_materno',
+        'curp',
         'domicilio',
         'colonia',
         'ciudad',
