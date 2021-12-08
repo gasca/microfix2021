@@ -30,13 +30,13 @@
 	action="{{route('users.store')}}"
 	enctype="multipart/form-data"
 	>
-	
-	{{csrf_field()}}
+	@csrf
+	{{-- {{csrf_field()}} --}}
 
   <div class="form-group">
 
 		<label for="name">Nombre</label>
-		<input type="text" name="nombre" class="form-control"  placeholder="" value= "{{ old('nombre')  }}">
+		<input type="text" name="nombre" class="form-control"  placeholder="" value= "{{'Jesus', old('nombre')   }}">
 		@if($errors->has('nombre'))
 			<p>{{ $errors->first('nombre') }}</p>
 		@endif
@@ -44,7 +44,7 @@
     <div class="form-group">
 
 		<label for="name">Apellido Paterno</label>
-		<input type="text" name="ap_paterno" class="form-control"  placeholder="" value= "{{ old('ap_paterno')  }}">
+		<input type="text" name="ap_paterno" class="form-control"  placeholder="" value= "{{ 'Gasca', old('ap_paterno')  }}">
 		@if($errors->has('ap_paterno'))
 			<p>{{ $errors->first('ap_paterno') }}</p>
 		@endif
@@ -53,7 +53,7 @@
    <div class="form-group">
 
 		<label for="name">Apellido Materno</label>
-		<input type="text" name="ap_materno" class="form-control"  placeholder="" value= "{{ old('ap_materno')  }}">
+		<input type="text" name="ap_materno" class="form-control"  placeholder="" value= "{{'Belman', old('ap_materno')  }}">
 		@if($errors->has('ap_materno'))
 			<p>{{ $errors->first('ap_materno') }}</p>
 		@endif
@@ -62,7 +62,7 @@
   <div class="form-group">
 
 	<label for="name">Curp</label>
-	<input type="text" name="curp" class="form-control"  placeholder="" value= "{{ old('curp')  }}">
+	<input type="text" name="curp" class="form-control"  placeholder="" value= "{{'123344', old('curp')  }}">
 	@if($errors->has('curp'))
 		<p>{{ $errors->first('curp') }}</p>
 	@endif
@@ -73,7 +73,7 @@
 <div class="form-group">
 	
 		<label for="Direccion">Domicilio</label>	
-		<input type="text" name="domicilio" class="form-control" placeholder=""   value= "{{ old('domicilio')  }}">
+		<input type="text" name="domicilio" class="form-control" placeholder=""   value= "{{ 'sssss', old('domicilio')  }}">
 		@if($errors->has('domicilio'))
 			<p>{{ $errors->first('domicilio') }}</p>
 		@endif
@@ -94,7 +94,7 @@
 		<div class="form-group">
 	
 		<label for="CP">Codigo Postal</label>	
-		<input type="text" name="codigo_postal" class="form-control" placeholder=""   value= "{{ old('codigo_postal')  }}">
+		<input type="text" name="codigo_postal" class="form-control" placeholder=""   value= "{{'38240', old('codigo_postal')  }}">
 		@if($errors->has('codigo_postal'))
 			<p>{{ $errors->first('codigo_postal') }}</p>
 		@endif
@@ -116,7 +116,7 @@
    <div class="form-group">
 	
 		<label for="phone">Telefono para llamarle</label>	
-		<input type="input" name="telefono" class="form-control"  placeholder="" value= "{{ old('telefono')  }}" >
+		<input type="input" name="telefono" class="form-control"  placeholder="" value= "{{'42121212', old('telefono')  }}" >
 		@if($errors->has('telefono'))
 			<p>{{ $errors->first('telefono') }}</p>
 		@endif
@@ -129,7 +129,7 @@
   	<div class="form-group">
 	
 		<label for="correo">Correo</label>	
-		<input type="text" name="correo" class="form-control" placeholder="" value= "{{ old('correo')  }}">
+		<input type="text" name="correo" class="form-control" placeholder="" value= "{{'hola@hotmail.com', old('correo')  }}">
 		@if($errors->has('correo'))
 			<p>{{ $errors->first('correo') }}</p>
 		@endif

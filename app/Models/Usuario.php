@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Archivo;
 
 class Usuario extends Model
 {
@@ -47,4 +48,12 @@ class Usuario extends Model
         'email_verified_at' => 'datetime',
      
     ];
+
+    public function archivo() //archivo->alumno
+    {
+
+        return $this->hasOne(Archivo::class, 'usuario_id');//hasmany tiene muchos
+
+    }
+
 }
