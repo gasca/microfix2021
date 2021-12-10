@@ -8,7 +8,7 @@
 
 <p>Nombre del usuario: {{ $user->nombre }}</p>
 <p>Email del usuario: {{ $user->correo }}</p>
-<img src="/storage/{{ $user->archivo->foto}}" alt="">
+<img src="/files/{{ $user->archivo->foto}}" alt="">
 
 <p>
     {{-- <a href="{{ url('/usuarios') }}"> Regresar a Lista </a> --}}

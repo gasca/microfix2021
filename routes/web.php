@@ -21,6 +21,8 @@ DB::listen(function($query){
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+
 Route::get('/', 'UserController@microfix')->name('users.microfix');
 
 

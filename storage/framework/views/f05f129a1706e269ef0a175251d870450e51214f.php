@@ -8,7 +8,7 @@
 
 <p>Nombre del usuario: <?php echo e($user->nombre); ?></p>
 <p>Email del usuario: <?php echo e($user->correo); ?></p>
-<img src="/storage/<?php echo e($user->archivo->foto); ?>" alt="">
+<img src="/files/<?php echo e($user->archivo->foto); ?>" alt="">
 
 <p>
     

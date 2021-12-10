@@ -75,11 +75,12 @@ return [
     | Here you may configure the symbolic links that will be created when the
     | `storage:link` Artisan command is executed. The array keys should be
     | the locations of the links and the values should be their targets.
-    |
+    / https://laravel.com/docs/8.x/helpers#method-config-path
+    |SE MODIFICO EL  BASE_PATH DEVUELVE LA RUTA DE ORIGEN POR PUBLIC PATH
     */
 
     'links' => [
-        public_path('storage') => storage_path('app/public'),
+       base_path('public_html/files') => storage_path('app/public'),
     ],
 
 ];
