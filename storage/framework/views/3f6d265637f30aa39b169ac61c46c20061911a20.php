@@ -25,9 +25,11 @@
 
   
 
-        
-
+        <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/fuentes.css">
         <link rel="stylesheet" href="css/estilo.css" >
+        <link rel="stylesheet" href="css/tarjetas.css" >
+        <link rel="stylesheet" href="css/piepagina.css">
 
 
 </head>

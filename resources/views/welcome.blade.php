@@ -25,11 +25,11 @@
 
   {{-- <link href="{{ asset('css/estilo.css') }}" rel="stylesheet"/>--}}
 
-        {{-- <link rel="stylesheet" href="css/carusell.css" >
-        <link rel="stylesheet" href="css/media.css">
-        <link rel="stylesheet" href="css/estilo.css" > --}}
-
+        <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/fuentes.css">
         <link rel="stylesheet" href="css/estilo.css" >
+        <link rel="stylesheet" href="css/tarjetas.css" >
+        <link rel="stylesheet" href="css/piepagina.css">
 
 
 </head>

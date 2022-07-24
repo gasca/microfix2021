@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "Mosk100";
+    src: url("../fonts/MoskThin100.woff2") format("woff2"),
+    url("../fonts/MoskThin100.ttf") format("truetype"),
+    url("../fonts/MoskThin100.woff") format("woff");
+  }
+
+
+  @font-face {
+    font-family: "Mosk400";
+        src: url("../fonts/MoskNormal400.woff2") format("woff2"),
+        url("../fonts/MoskNormal400.ttf") format("truetype"),
+        url("../fonts/MoskNormal.woff") format("woff");
+  }
