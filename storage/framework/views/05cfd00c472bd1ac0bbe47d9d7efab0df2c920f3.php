@@ -22,3 +22,4 @@
 
 
 </header>
+<?php /**PATH C:\laragon\www\microfix2021\resources\views/partials/nav.blade.php ENDPATH**/ ?>

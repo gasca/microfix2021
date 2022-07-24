@@ -21,3 +21,4 @@
 
 
 
+<?php /**PATH C:\laragon\www\microfix2021\resources\views/partials/footer.blade.php ENDPATH**/ ?>

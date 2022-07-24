@@ -3,10 +3,12 @@
 
 
 @media screen and (max-width: 750px) {
-    body {
-   
-     
-    }
+
+body{
+
+    background-color: blue;
+}
+
 
     .carousel-item > img{
       width: 100%;
@@ -30,7 +32,7 @@
 @media screen and (max-width: 600px) {
     body {
   /*    background-color: olive;*/
-   
+
     }
     .carousel-item{
        margin: 1.5em;
@@ -44,7 +46,7 @@
     color: white;
   }
   .carousel-item{
-     height:325px; 
+     height:325px;
      width: 325px;
 
   }
