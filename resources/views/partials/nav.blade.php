@@ -1,8 +1,8 @@
 <header>
 
     <img src="img/logocolor.png" alt="">
-    <nav>
-        <ul>
+    <nav class="dropdown">
+        <ul class="dropdown-content">
             <li>
                 <a href="">Inicio</a>
             </li>
