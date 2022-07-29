@@ -6,7 +6,7 @@
 
 body{
 
-
+    background-color: rgb(97, 137, 179);
     font-size: 20pt;
     font-family: 'Mosk400', 'Courier New';
 
@@ -60,3 +60,6 @@ a{
     display: inline-flex;
 
 }
+
+
+

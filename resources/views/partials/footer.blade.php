@@ -9,9 +9,11 @@
         </div>
         <div class="box">
             <h2>SOBRE NOSOTROS</h2>
-            <p>Empresa dedicada al servicio de tecnología desde el Desarrollo de Aplicaciones,
+            <p>Empresa dedicada al servicio de tecnología desde el Desarrollo de Web y Aplicaciones Móviles,
                 Soporte y Asesoría de Hardware y Software. <br><br>
-                Servicio, Calidad y Atención a cada uno de nuestros clientes.
+                Servicio de Soporte Técnico y Video Vigilancia.
+                <br>
+                Calidad y Atención a cada uno de nuestros clientes.
                 </p>
 
         </div>

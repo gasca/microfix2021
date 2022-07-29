@@ -1,27 +1,37 @@
-<footer class="footer mt-auto py-3">
-    <div class="container">
-        
-        <span class="text-muted">
-            <a href="https://facebook.com/MicrofixIrapuato"  target="_blank" >
-                <img src="img/icon/facebook.png" alt="">
-                facebook/MicrofixIrapuato                
-            </a></span>
-        <span class="text-muted">
-            <a href="https://api.whatsapp.com/send?phone=524623353961&text=Hola!%20Quiero%20Información!" target="_blank" >
-                <img src="img/icon/whatsapp.png" alt="">
-                462-335-39-61
-            </a></span>
+<footer class="pie-pagina">
+    <div class="grupo-1">
+        <div class="box">
+            <figure>
+                <a href="#">
+                    <img src="img/logoblanco.png" alt="Microfix Logo">
+                </a>
+            </figure>
+        </div>
+        <div class="box">
+            <h2>SOBRE NOSOTROS</h2>
+            <p>Empresa dedicada al servicio de tecnología desde el Desarrollo de Web y Aplicaciones Móviles,
+                Soporte y Asesoría de Hardware y Software. <br><br>
+                Servicio de Soporte Técnico y Video Vigilancia.
+                <br>
+                Calidad y Atención a cada uno de nuestros clientes.
+                </p>
+
+        </div>
+        <div class="box">
+            <h2>SIGUENOS</h2>
+            <div class="red-social">
+                <a href="https://facebook.com/MicrofixIrapuato"  target="_blank" class="fa fa-facebook"></a>
+                <a  href="https://api.whatsapp.com/send?phone=524623353961&text=Hola!%20Quiero%20Información!" target="_blank"  class="fa fa-whatsapp"></a>
+
+            </div>
+        </div>
+    </div>
+    <div class="grupo-2">
+        <small>&copy; 2022 <b>Microfix</b> - Todos los Derechos Reservados.</small>
     </div>
 </footer>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
 
 
 
-</body>
-
-</html>
 <?php /**PATH C:\laragon\www\microfix2021\resources\views/partials/footer.blade.php ENDPATH**/ ?>
